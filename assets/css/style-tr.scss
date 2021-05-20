@@ -102,7 +102,22 @@ body {
 
 .bg_page {
 	background: linear-gradient(90deg, #9F9E9F -6.46%, #F1F1F1 23.13%, #FFFFFF 49.36%, #F0F0F0 76.71%, #9F9E9F 100.72%);
-	/*overflow: hidden;*/
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	&:before {
+		position: absolute;
+		content: url(./../img/bgpage.png);
+		top: 9%;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.bg_page:before {
+		display: none;
+	}
 }
 
 /* site36_head_col0_dcentral */

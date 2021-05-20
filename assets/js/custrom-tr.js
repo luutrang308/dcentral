@@ -7,7 +7,10 @@ $(document).ready(function(){
 
   $('.icon_open_menu').click(function() {
     $('.section_header').toggleClass('active')
-  })
+  });
+  $('.icon_open_menu').click(function() {
+    $('.site36_head_col0_dcentral').toggleClass('active_bg')
+  });
 
   $('.slider_banner').slick({
     dots: false,
@@ -38,9 +41,66 @@ $(document).ready(function(){
     
   });
 
+  $('.slider_thuvien').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    autoplaySpeed: 8000,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: false,    
+    arrows: true,
+    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='./assets/img/left.png' alt=''></button>",
+    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='./assets/img/right1.png' alt=''></button>",
+    
+  });
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    $('.slider_thuvien').slick('setPosition');
+  });
 
+  $('.news_page').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    autoplaySpeed: 6000,
+    arrows: false,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+  });
+  $('.dailypp_page').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    autoplaySpeed: 6000,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='./assets/img/left1.png' alt=''></button>",
+    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='./assets/img/right2.png' alt=''></button>",
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 
-
+  $('.img_position').click(function() {
+    $(this).find('.box_hover').toggleClass('active');
+  });
 
 
 
@@ -156,9 +216,9 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
-      $('.site35_head_col0_icon').addClass('active');
+      $('.site36_head_col0_dcentral').addClass('active');
     } else {
-      $('.site35_head_col0_icon').removeClass('active');
+      $('.site36_head_col0_dcentral').removeClass('active');
     }
   });
 

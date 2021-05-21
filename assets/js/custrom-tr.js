@@ -102,7 +102,7 @@ $(document).ready(function(){
     $(this).find('.box_hover').toggleClass('active');
   });
 
-
+  
 
 
 
@@ -251,6 +251,7 @@ $(document).ready(function(){
 
 
 });
+
 
 
 var TabPictureView = {

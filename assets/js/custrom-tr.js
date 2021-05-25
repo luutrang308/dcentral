@@ -1,5 +1,12 @@
 $(document).ready(function(){
   new WOW().init();
+
+  AOS.init(); 
+
+
+
+
+
   /* site35_head_col0_icon */
   $('.open_form').click(function() {
     $('.form_search').toggleClass('active')
@@ -58,6 +65,20 @@ $(document).ready(function(){
     $('.slider_thuvien').slick('setPosition');
   });
 
+  $('.slider_dcentral').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    autoplaySpeed: 8000,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: false,    
+    arrows: true,
+    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='./assets/img/left.png' alt=''></button>",
+    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='./assets/img/right1.png' alt=''></button>",
+    
+  });
+  
   $('.news_page').slick({
     dots: false,
     infinite: true,

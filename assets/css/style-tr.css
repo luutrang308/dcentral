@@ -4186,6 +4186,11 @@ body {
   .site36_image_col12_hinhanh .video_anbum, .site36_image_col12_hinhanh .list_grid_video, .site36_image_col12_hinhanh .site36_file_col12_tailieu {
     padding: 0 15px;
   }
+
+  .site36_image_col12_hinhanh .site36_file_col12_tailieu .box_item .text p {
+    font-size: 14px;
+    -webkit-line-clamp: 3;
+  }
 }
 /* site36_menu_col0_matbang_1 */
 .site36_menu_col0_matbang.site36_menu_col0_matbang_1 {
